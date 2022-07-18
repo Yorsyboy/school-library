@@ -10,11 +10,7 @@ class Person
   attr_reader :id
 
   def can_use_services?
-    if is_of_age?
-      true
-    else
-      false
-    end
+    is_of_age? ? true : false
   end
 
   private
