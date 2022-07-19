@@ -1,4 +1,4 @@
-require_relative './decorator.rb'
+require_relative './decorator'
 
 class Person < Nameable
   def initialize(age, name = 'Unknown', parent_permission: true)
