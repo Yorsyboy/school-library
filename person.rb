@@ -13,9 +13,6 @@ class Person < Nameable
     super()
   end
 
-  attr_accessor :name, :age
-  attr_reader :id
-
   def can_use_services?
     is_of_age? || @parent_permission == true
   end
