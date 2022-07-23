@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# SChool Library
+# School Library
 
 > Description the project.
 
