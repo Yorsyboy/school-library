@@ -2,7 +2,7 @@
 
 # School Library
 
-> Description the project.
+> A book library that record what books are in the library and who borrows them. The app allows you to:
 
 
 ## Built With
