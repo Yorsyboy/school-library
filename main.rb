@@ -14,7 +14,7 @@ end
 
 def main(_loop) # rubocop:disable Metrics/MethodLength, Metrics/CyclomaticComplexity
   app = App.new
-    puts 'Welcome to School Library App!'
+  puts 'Welcome to School Library App!'
   loop do
     menu
     option = gets.chomp.to_i
