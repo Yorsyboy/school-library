@@ -1,1 +1,9 @@
-[{"class":"Student","age":24,"name":"Toyosi","parent_permission":"y","id":804}]git branch
+[
+  {
+    "class": "Student",
+    "age": 24,
+    "name": "Toyosi",
+    "parent_permission": "y",
+    "id": 804
+  }
+]
