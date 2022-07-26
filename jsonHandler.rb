@@ -8,4 +8,4 @@ module JsonHandler
   def self.generate_json(array)
     JSON.generate(array)
   end
-end 
+end
