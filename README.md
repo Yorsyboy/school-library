@@ -4,11 +4,9 @@
 
 > A book library that record what books are in the library and who borrows them. The app allows you to:
 
-
 ## Built With
 
 - Ruby
-
 
 ## Getting Started
 
@@ -22,7 +20,6 @@ git clone https://github.com/Yorsyboy/school-library.git
 cd school-library
 ```
 
-
 ### Prerequisites
 
 - Ruby
@@ -34,6 +31,12 @@ cd school-library
 - GitHub: [@Yorsyboy](https://github.com/Yorsyboy)
 - Twitter: [@tboytaiwo](https://twitter.com/Tboytaiwo)
 - LinkedIn: [Toyosi Taiwo](https://linkedin.com/in/taiwo-toyosi)
+
+👤 **Frankline Osoro**
+
+- GitHub: [@frank1738](https://github.com/frank1738)
+- Twitter: [@frankhiggins08](https://twitter.com/frankhiggins08)
+- LinkedIn: [Frankline Osoro](http://www.linkedin.com/in/frankline-osoro-b526ba18b)
 
 ## 🤝 Contributing
 
