@@ -24,7 +24,7 @@ class Rental
     hash = {}
     hash[:date] = @date
     hash[:person_id] = @person.id
-    hash[:book_id] = @book.id
+    hash[:book_id] = @book
     hash
   end
 end
