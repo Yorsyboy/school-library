@@ -3,13 +3,19 @@ require_relative './student'
 require_relative './teacher'
 require_relative './rental'
 
+require_relative './datahandler'
+require_relative './classroom'
+
 class App
   attr_accessor :books, :people
 
   def initialize
-    @books = []
-    @people = []
-    @rentals = []
+    @people_storage = DataHandler.new('people.json')
+    @books_storage = DataHandler.new('books.json')
+    @rentals_storage = DataHandler.new('rentals.json')
+    @people = @people_storage.objects_from_array(@people_storage.read_data)
+    @books = @books_storage.objects_from_array(@books_storage.read_data)
+    @rentals = @rentals_storage.rentals_from_array(@rentals_storage.read_data, @books, @people)
   end
 
   def list_books
@@ -90,7 +96,7 @@ class App
     puts
     print 'Date: '
     date = gets.chomp
-    @rentals.push(Rental.new(date, @people[person_index], books[book_index]))
+    @rentals.push(Rental.new(date, @people[person_index], @books[book_index]))
     puts 'Rental created successfully'
   end
 
@@ -102,5 +108,13 @@ class App
         puts "Date: #{rental.date}, Book \"#{rental.book.title}\" by #{rental.book.author}"
       end
     end
+  end
+
+  def exit_app
+    @people_storage.write_data(@people_storage.objects_to_hash_array(@people))
+    @books_storage.write_data(@books_storage.objects_to_hash_array(@books))
+    @rentals_storage.write_data(@rentals_storage.objects_to_hash_array(@rentals))
+    puts 'Thank you for using this app!'
+    exit(true)
   end
 end
