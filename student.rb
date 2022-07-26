@@ -1,12 +1,14 @@
 require_relative './person'
 
 class Student < Person
-  def initialize(age, classroom, name, parent_permission: true)
-    super(age, name, parent_permission: parent_permission)
+  attr_reader :classroom
+
+  def initialize(age, classroom, name, parent_permission:true,id: nil)
+    super(age, name, parent_permission:parent_permission,id:id)
     @classroom = classroom
   end
 
-  attr_reader :classroom
+  
 
   def classroom=(classroom)
     @classroom = classroom
@@ -15,5 +17,19 @@ class Student < Person
 
   def play_hooky
     "¯\(ツ)/¯"
+  end
+
+  def to_hash
+    hash = {}
+    hash[:class] = self.class
+    hash[:age] = @age
+    hash[:name] = @name
+    hash[:parent_permission] = @parent_permission
+    hash[:id] = @id
+    hash
+  end
+
+  def self.create_from_hash(hash)
+    Student.new(hash['age'],nil, hash['name'], parent_permission: hash['parent_permission'], id: hash['id'])
   end
 end

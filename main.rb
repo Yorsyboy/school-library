@@ -33,7 +33,7 @@ def main(_loop) # rubocop:disable Metrics/MethodLength, Metrics/CyclomaticComple
     when 6
       app.person_rentals
     when 7
-      puts 'Thank you for using this app!'
+      app.exit_app
       break
     else
       puts 'Please choose an appropriate number'
